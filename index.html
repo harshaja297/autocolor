@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relax</title>
+</head>
+<style>
+#btn{
+    padding: 10px;
+    border-radius: 10px;
+    /* border-color: black; */
+    border: 4px solid salmon;
+    background-color: khaki;
+    Display: none;
+}
+#division{
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<body>
+    <div id = "parent">
+        <div id="division">
+            <button id="btn" ></button>
+        </div>
+    <h1 id ="h1" ></h1>
+    
+    </div>
+    <script src = "./script.js">
+let header = document.createElement("h1");
+header.id = "george";
+let h1 = document.getElementById('h1');
+let btn = document.getElementById("btn");
+
+let j=0;
+let arrOfColors = "0 1 2 3 4 5 6 7 8 9 A B C D E F";
+
+let rand =()=> Math.floor(Math.random()*16);
+let arr = arrOfColors.split(' ');
+btn.addEventListener('click',change());
+console.log(arr);
+
+// function change(){
+//     let col = '#';
+//     body = document.querySelector("body");
+//     for(let i = 0 ; i<6 ; i++){
+//         col = col+arr[rand()];
+//     }
+//     body.style.backgroundColor = col;
+//     j++;
+//     h1.innerHTML = `COUNTER : ${j}`;
+
+function getter(){
+    funs = [a(),b(),c(),d(),e()];
+    for(let i =0 ;i<=5 ;i++){
+        return funs[i];
+    }
+}
+
+setInterval(change,1500)
+function change(){
+    let col = '#';
+    
+    body = document.querySelector("body");
+    body.style.transitionDuration ="4s";
+    for(let i = 0 ; i<6 ; i++){
+        col = col+arr[rand()];
+    }
+    body.style.backgroundColor = col;
+    j++;
+    // h1.innerHTML = `Counter: ${j}`;
+    // document.getElementById("parent").appendChild(header);
+    // document.getElementById("george").innerHTML = `dfsjjdfhajlh`;   
+}
+
+
+    </script>
+
+</body>
+</html>
